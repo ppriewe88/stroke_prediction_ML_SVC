@@ -20,7 +20,12 @@ The steps I made:
 
 How to get a first impression:
   - Check the documentation folder! You will find two separate documents: one for the data analysis, one for the machine learning project!
-  - If you like, check out my short demo video of the project (available on top level of this repo: "Machine Learning stroke prediction SVC final.mp4")
+  - If you like, check out my short demo video of the project (available in the folder "documentation and video wrap up": "Machine Learning stroke prediction SVC final.mp4")
     
+Thanks for the visit!
 
+Feel free to contact me anytime, if you have questions, improvement ideas, if you found bugs (I hope you will, as I'm on a learning track and happy for any feedback!)
+
+Cheers!
+Patrick
 
