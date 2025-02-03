@@ -18,7 +18,9 @@ The steps I made:
   - Try out, how feature engineering, resampling, and thresholding (the results) could improve the overall performance
   - Set up the neccessary transformers, wrapper classes, and a pipeline to enable a global optimization
 
-The learnings:
-  - go see for yourself and check the DOCUMENTATION (only available in German, though, at least at the current point in time....)
+How to get a first impression:
+  - Check the documentation folder! You will find two separate documents: one for the data analysis, one for the machine learning project!
+  - If you like, check out my short demo video of the project (available on top level of this repo: "Machine Learning stroke prediction SVC final.mp4")
+    
 
 
