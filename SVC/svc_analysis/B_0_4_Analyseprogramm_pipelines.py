@@ -1,12 +1,19 @@
 from sklearn.pipeline import Pipeline
-# from imblearn.pipeline import Pipeline
 from sklearn.svm import SVC
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix, recall_score, precision_score
 from sklearn.metrics import classification_report
-from B_0_1_Transformer_ColumnSelector import ColumnSelector
-from B_0_2_Transformer_PartialSmoteResampler import PartialSmoteResampler
-from B_0_3_ThresholdClassifier import ThresholdedClassifier
+
+import sys
+import os
+
+# Projektverzeichnis hinzufügen
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+# Absolute Importe
+from transformers_and_threshold_model.B_0_1_Transformer_ColumnSelector import ColumnSelector
+from transformers_and_threshold_model.B_0_2_Transformer_PartialSmoteResampler import PartialSmoteResampler
+from transformers_and_threshold_model.B_0_3_ThresholdClassifier import ThresholdedClassifier
 import pickle
 
 ' ######################### Daten laden ###################'
@@ -22,9 +29,7 @@ resampling = "none"           # none, oder partial_smote
 classweight_y = 10           # Gewichtung für strokes
 gamma = 0.5                 # gamma für SVC
 C = 0.005                       # C für SVC
-show_rbf_plot = 0              # opb plot für brbf-bereiche gezeigt werden soll
 thresholded_classifier = 1     # 1 = pipeline mit thresholding.; 0= pipeline ohne!
-show_threshold_curve = 0     # 1: thresholdingkurve anzeigen, 0 sonst
 threshold = 0.07
 '######################### Zu verwendende Spalten #########################'
 ' ----------------------Steuerung: verwendete Spalten --------------------'
@@ -105,6 +110,7 @@ else:
     ])
     chosen_pipeline = pipeline_regular_classifier
 # Funktioniert!! Allerdings aktuell noch NICHT FÜR PARTIALSMOTE.
+
 ' ################ Fitting ###########'
 chosen_pipeline.fit(X_train, Y_train)
 

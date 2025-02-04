@@ -10,9 +10,9 @@ warnings.filterwarnings("ignore")
 
 
 ' ##################### STEUERUNGSBLOCK ################################'
-resampling = "partial_smote"           # none, smote, oder partial_smote
+resampling = "none"           # none, smote, oder partial_smote
 classweight_y = 4           # Gewichtung für strokes
-gamma = 0.5                 # gamma für SVC
+gamma = 0.001                 # gamma für SVC
 C = 0.005                       # C für SVC
 scaling_method = "Standard"   # "Standard", "MinMax", oder leer (dann unskaliert)
 show_rbf_plot = 1              # opb plot für brbf-bereiche gezeigt werden soll
